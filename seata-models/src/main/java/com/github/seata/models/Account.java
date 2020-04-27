@@ -1,0 +1,26 @@
+package com.github.seata.models;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.Date;
+
+/**
+ * @Author dengmin
+ * @Created 2020/4/23 11:07
+ */
+@Data
+@Builder
+public class Account {
+    @TableId(type = IdType.AUTO)
+    private Long id;
+
+    /**
+     * 余额
+     */
+    private Double balance;
+
+    private Date lastUpdateTime;
+}

@@ -1,0 +1,31 @@
+server:
+  port: 8882
+spring:
+  application:
+    name: seata-order
+  datasource:
+    dynamic:
+      primary: master
+      strict: true
+      seata: true
+      datasource:
+        master:
+          username: fuwu
+          password: baie_test_2017
+          url: jdbc:mysql://rm-bp1is9caac5z435j0o.mysql.rds.aliyuncs.com:3306/seata_order?useUnicode=false&autoReconnect=true&characterEncoding=utf-8&tcpRcvBuf=2048000&zeroDateTimeBehavior=convertToNull
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          schema: classpath:db/schema-account.sql
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: baie_tx_group
+    nacos:
+      discovery:
+        server-addr: 10.10.47.4:8848
+
+seata:
+  config:
+    type: nacos
+    nacos:
+      server-addr: 10.10.47.4
+      group: SEATA_GROUP
