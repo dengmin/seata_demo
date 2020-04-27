@@ -11,7 +11,7 @@ spring:
       datasource:
         master:
           username: fuwu
-          password: baie_test_2017
+          password: baie_test_2000
           url: jdbc:mysql://rm-bp1is9caac5z435j0o.mysql.rds.aliyuncs.com:3306/seata_account?useUnicode=false&autoReconnect=true&characterEncoding=utf-8&tcpRcvBuf=2048000&zeroDateTimeBehavior=convertToNull
           driver-class-name: com.mysql.cj.jdbc.Driver
           schema: classpath:db/schema-account.sql
